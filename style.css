@@ -1,0 +1,74 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f9f9;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #1c3f5c, #eef2f3);
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background-color: #cfe3e2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #2c6e49;
+    font-size: 22px;
+}
+
+.card p {
+    color: #184d47;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
