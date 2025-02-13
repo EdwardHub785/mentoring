@@ -6,60 +6,72 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.hero-section {
+  }
+  
+  /* Header */
+  .hero-section {
     background: linear-gradient(135deg, rgb(127, 133, 139), #e28fa4, rgb(102, 191, 233));
-    text-align: center;
-    padding: 20px 0;
+    padding: 50px 10%;
     color: #fff;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 100%;
+    max-width: 1200px;
+}
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    margin-bottom: 10px;
-    border: 3px solid #ffffff;
+    border: 4px solid #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.hero-content h1 {
-    font-size: 36px;
-    margin: 5px 0;
-    font-weight: bold;
+.hero-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 0;
 }
 
 .subtitle {
     font-size: 18px;
     font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.cards-section {
+  
+  /* Sección de tarjetas */
+  .cards-section {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 90%;
     max-width: 1200px;
     gap: 20px;
     padding: 20px 0;
-}
-
-.cards-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    gap: 20px;
-}
-
-.card {
+  }
+  
+  /* Tarjeta */
+  .card {
     background-color: #6794bd;
     color: #f3f8f5;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px; /* Mayor relleno para un look más elegante */
     width: 32%;
     max-width: 400px;
     text-align: center;
@@ -69,48 +81,121 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 180px;
+    transition: all 0.3s ease; /* Transición suave */
+  }
+ 
+  .card i {
+    font-size: 40px; /* Ajusta el tamaño */
+    margin-bottom: 10px;
+    color: #ffffff; /* Cambia el color si lo deseas */
 }
 
-.card h3, .card h2 {
+
+  .card i.fa-spotify {
+    color: #1bc055; /* Verde de Spotify */
+}
+
+.card i.fa-youtube {
+    color: #FF0000; /* Rojo de YouTube */
+}
+
+.card i.fa-instagram {
+    color: #E1306C; /* Rosa de Instagram */
+}
+
+
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3,
+  .card h2 {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.card p {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .card p {
     font-size: 16px;
     margin: 0;
+  }
+  
+  .additional-cards {
+    flex-direction: column; /* Acomoda las tarjetas en una sola columna */
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Ajusta el tamaño máximo */
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .cards-row {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .card {
-        width: 45%;
-    }
+.additional-cards .card {
+    width: 90%;
+    max-width: 800px; /* Tarjetas más anchas */
+    text-align: left;
+    padding: 30px;
+    min-height: auto;
+    font-size: 18px;
+    background-color: #8ac1e4; /* Color más elegante */
+    border-left: 6px solid #746e88; /* Un detalle moderno */
+    transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 28px;
-    }
+/* Efecto hover para elegancia */
+.additional-cards .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
+/* Mejora la lista dentro de las tarjetas */
+.additional-cards .card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.additional-cards .card ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.additional-cards .card ul li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
     .cards-section {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
     
-    .cards-row {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .card {
-        width: 90%;
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
         text-align: center;
     }
-}
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+}   
+    .card {
+      width: 90%;
+      text-align: center;
+    }
+
+  
