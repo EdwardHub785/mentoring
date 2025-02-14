@@ -1,201 +1,176 @@
+/* Global */
 body {
-    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f9f9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Header */
-  .hero-section {
-    background: linear-gradient(135deg, rgb(127, 133, 139), #e28fa4, rgb(102, 191, 233));
-    padding: 50px 10%;
-    color: #fff;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #bebcbc, #ffffff);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Header */
+.hero-section {
+  width: 100%;
+  padding: 60px 5%;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
 }
 
 .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    width: 100%;
-    max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
 .hero-text {
-    max-width: 600px;
-    text-align: left;
+  flex: 1;
+  margin-left: 40px;
 }
 
 .hero-text h1 {
-    font-size: 38px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin: 0 0 10px;
 }
 
 .subtitle {
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
 }
 
-  
-  /* Sección de tarjetas */
-  .cards-section {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 90%;
-    max-width: 1200px;
-    gap: 20px;
-    padding: 20px 0;
-  }
-  
-  /* Tarjeta */
-  .card {
-    background-color: #6794bd;
-    color: #f3f8f5;
-    border-radius: 10px;
-    padding: 25px; /* Mayor relleno para un look más elegante */
-    width: 32%;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 180px;
-    transition: all 0.3s ease; /* Transición suave */
-  }
- 
-  .card i {
-    font-size: 40px; /* Ajusta el tamaño */
-    margin-bottom: 10px;
-    color: #ffffff; /* Cambia el color si lo deseas */
+/* Sección de tarjetas */
+.cards-section {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
 }
 
-
-  .card i.fa-spotify {
-    color: #1bc055; /* Verde de Spotify */
+/* Tarjetas principales */
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  flex: 1 1 280px;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card i.fa-youtube {
-    color: #FF0000; /* Rojo de YouTube */
+.card i {
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
-.card i.fa-instagram {
-    color: #E1306C; /* Rosa de Instagram */
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
+.card p {
+  font-size: 18px;
+  line-height: 1.6;
+}
 
-  .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card h3,
-  .card h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .card p {
-    font-size: 16px;
-    margin: 0;
-  }
-  
-  .additional-cards {
-    flex-direction: column; /* Acomoda las tarjetas en una sola columna */
-    align-items: center;
-    width: 100%;
-    max-width: 800px; /* Ajusta el tamaño máximo */
+/* Colores de íconos */
+.card i.fa-spotify { color: #1DB954; }
+.card i.fa-youtube { color: #FF0000; }
+.card i.fa-instagram { color: #E1306C; }
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Tarjetas adicionales */
+.additional-cards {
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
 .additional-cards .card {
-    width: 90%;
-    max-width: 800px; /* Tarjetas más anchas */
-    text-align: left;
-    padding: 30px;
-    min-height: auto;
-    font-size: 18px;
-    background-color: #8ac1e4; /* Color más elegante */
-    border-left: 6px solid #746e88; /* Un detalle moderno */
-    transition: all 0.3s ease-in-out;
+  text-align: left;
+  padding: 40px;
+  border-left: 8px solid #4ca1af;
+  max-width: 800px;
 }
 
-/* Efecto hover para elegancia */
-.additional-cards .card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.additional-cards .card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-/* Mejora la lista dentro de las tarjetas */
 .additional-cards .card ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .additional-cards .card ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
 }
 
 .additional-cards .card ul li img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+  width: 24px;
+  margin-right: 12px;
 }
 
-  
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .cards-section {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .card {
-      width: 90%;
-    }
+/* Animaciones */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-img {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 20px;
-    }
-
-    .hero-text {
-        text-align: center;
-    }
-}   
-    .card {
-      width: 90%;
-      text-align: center;
-    }
-
-  
+  .hero-text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+  .hero-text h1 {
+    font-size: 38px;
+  }
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
